@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>S3 Début formulaires</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <form id="contact" action="" method="post">
+        <h3>Formulaire de Paiement</h3>
+        <h4>Informations de Contact</h4>
+        <fieldset>
+            <input placeholder="Nom" type="text" tabindex="1" required autofocus>
+        </fieldset>
+        <fieldset>
+            <input placeholder="Courriel" type="email" tabindex="2" required>
+        </fieldset>
+        <fieldset>
+            <input placeholder="Téléphone" type="tel" tabindex="3" required>
+        </fieldset>
+        <fieldset>
+            <input placeholder="Compagnie" type="text" tabindex="4" required autofocus>
+        </fieldset>
+        <fieldset>
+            <label>
+                Province <select>name="province" type="text" required/><br/>
+                <option value="Quebec">Quebec</option>
+                <option value="Ontario">Ontario</option>
+                <option value="Alberta">Alberta</option>
+                <option value="Île-du-Prince-Édouard">Île-du-Prince-Édouard</option>
+                <option value="Nouveau-Brunswick">Nouveau-Brunswick</option>
+                <option value="Nouvelle-Écosse">Nouvelle-Écosse</option>
+                <option value="Manitoba">Manitoba</option>
+                <option value="Saskatchewan">Saskatchewan</option>
+                <option value="Nunavut">Nunavut</option>
+                <option value="Colombie-Britannique">Colombie-Britannique </option>
+            </select>
+            </label>
+            <h4>Informations sur la Commande</h4>
+            <fieldset>
+                <input placeholder="Pommes" type="tex" tabindex="5" required>
+            </fieldset>
+            <fieldset>
+                Patates: <input name="Patates" type="range" Max="40" Min="0" tabindex="6" required>
+            </fieldset>
+            <h4>Vos Commentaires</h4>
+            <fieldset>
+                <input placeholder="Pseudonyme (3-9 caractères):" type="text" tabindex="7" required autofocus>
+            </fieldset>
+
+            <textarea placeholder="Commentaires:" tabindex="5" required></textarea>
+        </fieldset>
+        <fieldset>
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Envoyer</button>
+        </fieldset>
+        <fieldset>
+            <button name="Annuler" type="reset" id="contact-submit_1" data-submit="...Sending">Annuler</button>
+        </fieldset>
+    </form>
+</div>
+
+</body>
+</html>
