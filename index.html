@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>S3 Début formulaires</title>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
 </head>
 <body>
 
@@ -12,16 +13,16 @@
         <h3>Formulaire de Paiement</h3>
         <h4>Informations de Contact</h4>
         <fieldset>
-            <input placeholder="Nom" type="text" tabindex="1" required autofocus>
+            Non:   <input  type="text" tabindex="1" required autofocus>
         </fieldset>
         <fieldset>
-            <input placeholder="Courriel" type="email" tabindex="2" required>
+            Courriel:   <input  type="email" tabindex="2" requiredplaceholder="user@domaine.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
         </fieldset>
         <fieldset>
-            <input placeholder="Téléphone" type="tel" tabindex="3" required>
+            Téléphone: <input type="tel" tabindex="3" required placeholder="819-555-5555" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
         </fieldset>
         <fieldset>
-            <input placeholder="Compagnie" type="text" tabindex="4" required autofocus>
+            Compagnie: <input type="text" tabindex="4" required autofocus>
         </fieldset>
         <fieldset>
             <label>
@@ -40,17 +41,17 @@
             </label>
             <h4>Informations sur la Commande</h4>
             <fieldset>
-                <input placeholder="Pommes" type="tex" tabindex="5" required>
+                Pommes:<input type="tex" tabindex="5" required>
             </fieldset>
             <fieldset>
-                Patates: <input name="Patates" type="range" Max="40" Min="0" tabindex="6" required>
+                Patates: <input name="Patates" type="range" Max="40" Min="0" tabindex="6" required step="5">
+                <span class="nbpatate">0</span>
             </fieldset>
             <h4>Vos Commentaires</h4>
             <fieldset>
-                <input placeholder="Pseudonyme (3-9 caractères):" type="text" tabindex="7" required autofocus>
+                Pseudonyme (3-9 caractères):   <input  type="text" tabindex="7" required autofocus>
             </fieldset>
-
-            <textarea placeholder="Commentaires:" tabindex="5" required></textarea>
+            Commentaires: <textarea  tabindex="5" required></textarea>
         </fieldset>
         <fieldset>
             <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Envoyer</button>
