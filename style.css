@@ -152,3 +152,12 @@ fieldset {
 :-ms-input-placeholder {
     color: #888;
 }
+#erreur_tel{
+    color: red;
+}
+#erreur{
+    color: red;
+}
+.invisible{
+    display: none;
+}

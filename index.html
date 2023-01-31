@@ -13,13 +13,14 @@
         <h3>Formulaire de Paiement</h3>
         <h4>Informations de Contact</h4>
         <fieldset>
-            Non:   <input  type="text" tabindex="1" required autofocus>
+            Non:   <input  type="text" tabindex="1" required autofocus minlength="2" maxlength="100" >
         </fieldset>
         <fieldset>
-            Courriel:   <input  type="email" tabindex="2" requiredplaceholder="user@domaine.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            Courriel:   <input  type="email" tabindex="2" value="user@domaine.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
         </fieldset>
         <fieldset>
-            Téléphone: <input type="tel" tabindex="3" required placeholder="819-555-5555" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+            Telephone: <input type="tel" tabindex="3" name="Telephone" id="Telephone" required placeholder="819-555-5555" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+            <span id="erreur_tel" class="invisible">Le indicatif nes corresponde pas </span>
         </fieldset>
         <fieldset>
             Compagnie: <input type="text" tabindex="4" required autofocus>
@@ -38,18 +39,23 @@
                 <option value="Nunavut">Nunavut</option>
                 <option value="Colombie-Britannique">Colombie-Britannique </option>
             </select>
-            </label>
+
             <h4>Informations sur la Commande</h4>
             <fieldset>
-                Pommes:<input type="tex" tabindex="5" required>
+                <label for="pomme">Pommes: </label>
+                Pommes:<input type="number" id="pomme" name="pomme" min="0" max="40" value="0" tabindex="5" required>
             </fieldset>
             <fieldset>
-                Patates: <input name="Patates" type="range" Max="40" Min="0" tabindex="6" required step="5">
-                <span class="nbpatate">0</span>
+
+                Patates: <input type="range" name="patates" onchange="afficher()"><span id="valeur">50</span>
+
+
             </fieldset>
+            <p id="erreur" >Le nombre de patate doit être supérieur a celui de la pomme </p>
+            <p id="reussite" > Vous avez reussi</p>
             <h4>Vos Commentaires</h4>
             <fieldset>
-                Pseudonyme (3-9 caractères):   <input  type="text" tabindex="7" required autofocus>
+                Pseudonyme (3-9 caractères):   <input  type="text" tabindex="7" required autofocus pattern="[A-Z].{1,7}(!|\$|\?)" >
             </fieldset>
             Commentaires: <textarea  tabindex="5" required></textarea>
         </fieldset>
